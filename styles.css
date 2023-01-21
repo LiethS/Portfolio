@@ -1,0 +1,165 @@
+:root {
+    --bg-start: #a01e1c;
+    --bg-end: #771817;
+    --fg-color: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+    background: linear-gradient(90deg, #3d3d3d, #222222);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    background: linear-gradient(45deg,
+            var(--bg-start),
+            var(--bg-end));
+    display: block;
+    height: 66px;
+    width: 100%;
+    display: flex;
+}
+
+img {
+    height: 50px;
+}
+
+.logo {
+    align-self: center;
+    height: 56px;
+    margin-top: 4px;
+    margin-left: 1%;
+    transition: 0.5s;
+    filter: brightness(0) invert(0);
+}
+
+.logo:hover {
+    filter: brightness(0) invert(1);
+}
+
+.logo_text {
+    align-self: center;
+    justify-self: center;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 7%;
+    color: black;
+    transition: 0.5s;
+}
+
+.logo_text:hover{
+    color: white;
+}
+
+.hamburger {
+    margin-left: auto;
+    margin-right: 1%;
+    justify-self: right;
+    align-self: center;
+    width: 35px;
+    height: 39px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.hamburger:hover .bar1, .hamburger:hover .bar2, .hamburger:hover .bar3{
+    background-color: #ffffff;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.change .bar1 {
+    background-color: rgb(255, 255, 255);
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    transition: 0s;
+    opacity: 0;
+}
+
+.change .bar3 {
+    background-color: rgb(255, 255, 255);
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.menuToggle a {
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+.menuToggle a:hover {
+    color: #881614;
+}
+
+.menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #000000;
+    border-radius: 3px;
+
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    width: 300px;
+    margin: 16px 0 0 -10px;
+    padding: 50px;
+    padding-top: 50px;
+
+    background: #000000;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+    z-index: 0;
+
+    transition: transform 0.5s;
+}
+
+.change .menu {
+    transform: translate(-100%);
+}
+
+.menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MNS LOGISTICS</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body>
+        <h id="myHeader">
+            <div id="nav" class="nav">
+                <div class="logo">
+                    <a href="#"><img src="MNS Logo.svg"></a>
+                </div>
+                <div class="logo_text">
+                    <a href="#">Mns Logistics</a>
+                </div>
+                <div class="hamburger" onclick="openMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="menuToggle">
+                    <div class="menu" >
+                        <a href="#"><li>Home</li></a>
+                        <a href="#"><li>About</li></a>
+                        <a href="#"><li>Info</li></a>
+                        <a href="#"><li>Contact</li></a>
+                    </div>
+                </div>
+            </div>
+        </h>
+    </body>
+</html>
+
+<script>
+    function openMenu() {
+        document.getElementById("myHeader").classList.toggle("change");
+    }
+</script>
