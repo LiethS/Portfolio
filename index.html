@@ -1,39 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lieth Shehadeh</title>
-        <link rel="stylesheet" href="styles.css" type="text/css">
-    </head>
-    <body>
-        <h id="myHeader">
-            <div id="nav" class="nav">
-                <div class="logo">
-                    <a href="#"><img src="MNS Logo.svg"></a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieth Shehadeh</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <h id="myHeader">
+        <div id="nav" class="nav">
+            <div class="logo_text">
+                <a href="#">Lieth Shehadeh</a>
+            </div>
+            <div class="hamburger" onclick="openMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div id="bar3" class="bar3"></div>
+            </div>
+            <div class="menuToggle">
+                <div class="menu">
+                    <a href="#">
+                        <li>Myself</li>
+                    </a>
+                    <a href="#">
+                        <li>Experience</li>
+                    </a>
+                    <a href="#">
+                        <li>Projects</li>
+                    </a>
+                    <a href="#">
+                        <li>Goals</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
                 </div>
-                <div class="logo_text">
-                    <a href="#">Lieth Shehadeh</a>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="navigation">
+                <a href="#">Myself</a>
+                <a href="#">Experience</a>
+                <a href="#">Projects</a>
+                <a href="#">Goals</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="introduction">
+                <div class="Earth">
+                    <a><img src="first earth.jpg"></a>
                 </div>
-                <div class="hamburger" onclick="openMenu()">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-                <div class="menuToggle">
-                    <div class="menu" >
-                        <a href="#"><li>Home</li></a>
-                        <a href="#"><li>About</li></a>
-                        <a href="#"><li>Info</li></a>
-                        <a href="#"><li>Contact</li></a>
+                <div class="myself">
+                    <div class="name">
+                        <a>Lieth Shehadeh</a>
+                    </div>
+                    <div class="degree">
+                        <a>Computer Science at York University</a>
                     </div>
                 </div>
             </div>
-        </h>
-    </body>
+            <div class="experience">
+                <div class="job">
+                    <div class="company">
+                        <a>MNS Logistics, Inc.</a>
+                    </div>
+                    <div class="role">
+                        <a>Junior Web Developer</a>
+                    </div>
+                    <div class="description">
+                        <a></a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="project">
+                    <div class="name">
+                        <a>MazeSolve</a>
+                    </div>
+                    <div class="languages">
+                        <a>Python</a>
+                    </div>
+                    <div class="description">
+                        <a></a>
+                    </div>
+                </div>
+            </div>
+            <div class="goals">
+
+            </div>
+            <div class="skills">
+
+            </div>
+        </div>
+    </h>
+</body>
+
 </html>
 
 <script>
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 58 || document.documentElement.scrollTop > 58) {
+            document.getElementById("nav").style.top = "0";
+        } else {
+            document.getElementById("nav").style.top = "-66px";
+        }
+    }
+
     function openMenu() {
         document.getElementById("myHeader").classList.toggle("change");
     }

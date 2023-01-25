@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+  }
+
 body {
     overflow-x: hidden;
     background-color: #ffffff;
@@ -25,46 +29,31 @@ a:active {
 }
 
 .nav {
+    position: fixed;
+    top: -66px;
     font-family: 'Inter', sans-serif;
     font-size: 50px;
-    background: linear-gradient(45deg,
-            var(--bg-start),
-            var(--bg-end));
+    background: black;
     display: block;
     height: 66px;
     width: 100%;
     display: flex;
-}
-
-img {
-    height: 50px;
-}
-
-.logo {
-    align-self: center;
-    height: 56px;
-    margin-top: 4px;
-    margin-left: 1%;
-    transition: 0.5s;
-    filter: brightness(0) invert(0);
-}
-
-.logo:hover {
-    filter: brightness(0) invert(1);
-}
+    transition: top 0.3s;
+} 
 
 .logo_text {
+    display: flex;
     align-self: center;
     justify-self: center;
     margin-top: 0;
-    margin-left: auto;
-    margin-right: 7%;
-    color: black;
+    margin-left: 37%;
+    margin-right: auto;
+    color: rgb(255, 255, 255);
     transition: 0.5s;
 }
 
 .logo_text:hover{
-    color: white;
+    color: rgb(47, 102, 255);
 }
 
 .hamburger {
@@ -80,7 +69,7 @@ img {
 }
 
 .hamburger:hover .bar1, .hamburger:hover .bar2, .hamburger:hover .bar3{
-    background-color: #ffffff;
+    background-color: rgb(47, 102, 255);
 }
 
 .bar1,
@@ -88,13 +77,13 @@ img {
 .bar3 {
     width: 35px;
     height: 5px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     margin: 6px 0;
     transition: 0.5s;
 }
 
 .change .bar1 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(47, 102, 255);
     transform: translate(0, 11px) rotate(-45deg);
 }
 
@@ -104,7 +93,7 @@ img {
 }
 
 .change .bar3 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(47, 102, 255);
     transform: translate(0, -11px) rotate(45deg);
 }
 
@@ -123,13 +112,13 @@ img {
 }
 
 .menuToggle a:hover {
-    color: #881614;
+    color: rgb(47, 102, 255);
 }
 
 .menuToggle span {
     display: block;
     width: 33px;
-    height: 4px;
+    height: 3px;
     margin-bottom: 5px;
     position: relative;
 
@@ -162,4 +151,23 @@ img {
 .menu li {
     padding: 10px 0;
     font-size: 22px;
+}
+
+.navigation {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background: #000000;
+}
+
+.navigation  a{
+    margin-top: 2%;
+    color: white;
+    transition: 0.5s;
+}
+
+.navigation  a:hover{
+    color: rgb(47, 102, 255);
 }
