@@ -12,7 +12,7 @@
     <h id="myHeader">
         <div id="nav" class="nav">
             <div class="logo_text">
-                <a href="#">Lieth Shehadeh</a>
+                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Lieth Shehadeh</a>
             </div>
             <div class="hamburger" onclick="openMenu()">
                 <div class="bar1"></div>
@@ -21,46 +21,42 @@
             </div>
             <div class="menuToggle">
                 <div class="menu">
-                    <a href="#">
+                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
                         <li>Myself</li>
                     </a>
-                    <a href="#">
+                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
                         <li>Experience</li>
                     </a>
-                    <a href="#">
+                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
                         <li>Projects</li>
                     </a>
-                    <a href="#">
+                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
                         <li>Goals</li>
                     </a>
-                    <a href="#">
+                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
                         <li>Contact</li>
                     </a>
+                    <a href="Lieth Shehadeh's Resume Comp Sci.pdf" target="_blank"><li>Resume</li></a>
                 </div>
             </div>
         </div>
         <div class="portfolio">
-            <div class="navigation">
-                <a href="#">Myself</a>
-                <a href="#">Experience</a>
-                <a href="#">Projects</a>
-                <a href="#">Goals</a>
-                <a href="#">Contact</a>
+            <div id="navigation" class="navigation">
+                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Myself</a>
+                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Experience</a>
+                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Projects</a>
+                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Goals</a>
+                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Contact</a>
+                <a href="Lieth Shehadeh's Resume Comp Sci.pdf" target="_blank">Resume</a>
             </div>
-            <div class="introduction">
-                <div class="Earth">
-                    <a><img src="first earth.jpg"></a>
-                </div>
+            <div id="introduction" class="introduction">
                 <div class="myself">
-                    <div class="name">
-                        <a>Lieth Shehadeh</a>
-                    </div>
-                    <div class="degree">
-                        <a>Computer Science at York University</a>
-                    </div>
+                    <div class="name"><a>L</a><a>i</a><a>e</a><a>t</a><a>h</a><a> </a><a>S</a><a>h</a><a>e</a><a>h</a><a>a</a><a>d</a><a>e</a><a>h</a></div>
+                    <a class="degree">Computer Science at York University</a>
+                    <img src="first earth.jpg">
                 </div>
             </div>
-            <div class="experience">
+            <div id="experience" class="experience">
                 <div class="job">
                     <div class="company">
                         <a>MNS Logistics, Inc.</a>
@@ -73,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="projects">
+            <div id="projects" class="projects">
                 <div class="project">
                     <div class="name">
                         <a>MazeSolve</a>
@@ -86,10 +82,10 @@
                     </div>
                 </div>
             </div>
-            <div class="goals">
+            <div id="goals" class="goals">
 
             </div>
-            <div class="skills">
+            <div id="skills" class="skills">
 
             </div>
         </div>
@@ -101,12 +97,13 @@
 <script>
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
-        if (document.body.scrollTop > 58 || document.documentElement.scrollTop > 58) {
+        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
             document.getElementById("nav").style.top = "0";
         } else {
             document.getElementById("nav").style.top = "-66px";
         }
     }
+    //try adding an oppacity change when scrolling down for the navigation bar
 
     function openMenu() {
         document.getElementById("myHeader").classList.toggle("change");
