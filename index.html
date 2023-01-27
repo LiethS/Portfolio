@@ -1,61 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lieth Shehadeh</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lieth Shehadeh</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
 
-<body>
-    <h id="myHeader">
-        <div id="nav" class="nav">
-            <div class="logo_text">
-                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Lieth Shehadeh</a>
-            </div>
-            <div class="hamburger" onclick="openMenu()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div id="bar3" class="bar3"></div>
-            </div>
-            <div class="menuToggle">
-                <div class="menu">
-                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
-                        <li>Myself</li>
-                    </a>
-                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
-                        <li>Experience</li>
-                    </a>
-                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
-                        <li>Projects</li>
-                    </a>
-                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
-                        <li>Goals</li>
-                    </a>
-                    <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">
-                        <li>Contact</li>
-                    </a>
-                    <a href="Lieth Shehadeh's Resume Comp Sci.pdf" target="_blank"><li>Resume</li></a>
+    <body onload="constructor()">
+        <h id="myHeader">
+            <div id="nav" class="nav">
+                <div class="logo_text">
+                    <a input type="button"
+                        onClick="document.getElementById('navigation').scrollIntoView();">Lieth
+                        Shehadeh</a>
+                </div>
+                <div class="hamburger" onclick="openMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div id="bar3" class="bar3"></div>
+                </div>
+                <div class="menuToggle">
+                    <div class="menu">
+                        <a input type="button"
+                            onClick="document.getElementById('experience').scrollIntoView();">
+                            <li>Experience</li>
+                        </a>
+                        <a input type="button"
+                            onClick="document.getElementById('projects').scrollIntoView();">
+                            <li>Projects</li>
+                        </a>
+                        <a input type="button"
+                            onClick="document.getElementById('goals').scrollIntoView();">
+                            <li>Goals</li>
+                        </a>
+                        <a input type="button"
+                            onClick="document.getElementById('navigation').scrollIntoView();">
+                            <li>Contact</li>
+                        </a>
+                        <a href="Lieth Shehadeh's Resume Comp Sci.pdf"
+                            target="_blank"><li>Resume</li></a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div id="scroll" class="scroll"></div>
+        </h>
         <div class="portfolio">
             <div id="navigation" class="navigation">
-                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Myself</a>
-                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Experience</a>
-                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Projects</a>
-                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Goals</a>
-                <a input type="button" onClick="document.getElementById('introduction').scrollIntoView();">Contact</a>
-                <a href="Lieth Shehadeh's Resume Comp Sci.pdf" target="_blank">Resume</a>
+                <a input type="button"
+                    onClick="document.getElementById('experience').scrollIntoView();">Experience</a>
+                <a input type="button"
+                    onClick="document.getElementById('projects').scrollIntoView();">Projects</a>
+                <a input type="button"
+                    onClick="document.getElementById('goals').scrollIntoView();">Goals</a>
+                <a input type="button"
+                    onClick="document.getElementById('navigation').scrollIntoView();">Contact</a>
+                <a href="Lieth Shehadeh's Resume Comp Sci.pdf"
+                    target="_blank">Resume</a>
             </div>
             <div id="introduction" class="introduction">
                 <div class="myself">
-                    <div class="name"><a>L</a><a>i</a><a>e</a><a>t</a><a>h</a><a> </a><a>S</a><a>h</a><a>e</a><a>h</a><a>a</a><a>d</a><a>e</a><a>h</a></div>
-                    <a class="degree">Computer Science at York University</a>
-                    <img src="first earth.jpg">
+                    <div id="parallax" class="parallax">
+                        <div class="name"><a>L</a><a>i</a><a>e</a><a>t</a><a>h</a><a>
+                        </a><a>S</a><a>h</a><a>e</a><a>h</a><a>a</a><a>d</a><a>e</a><a>h</a></div>
+                        <a class="degree">Computer Science at York University</a>
+                    </div>
+                    <img class="earth" src="552574.jpg">
                 </div>
             </div>
+            <div id="projects"class="section"><a>Projects</a></div>
+            <div class="projects">
+                <div class="project">
+                    <div class="name">
+                        <a>LiethS.me</a>
+                    </div>
+                    <div class="languages">
+                        <a>HTML, CSS, JavaScript</a>
+                    </div>
+                    <div class="description">
+                        <a></a>
+                    </div>
+                </div>
+                <div class="hborder"></div>
+                <div class="project">
+                    <div class="name">
+                        <a>MazeSolve</a>
+                    </div>
+                    <div class="languages">
+                        <a>Python</a>
+                    </div>
+                    <div class="description">
+                        <a></a>
+                    </div>
+                </div>
+                <div class="hborder"></div>
+                <div class="project">
+                    <div class="name">
+                        <a>MyMovieList</a>
+                    </div>
+                    <div class="languages">
+                        <a>Python, Flask, HTML, CSS, SQL</a>
+                    </div>
+                    <div class="description">
+                        <a></a>
+                    </div>
+                </div>
+                <div class="hborder"></div>
+                <div class="project">
+                    <div class="name">
+                        <a>Amadeus</a>
+                    </div>
+                    <div class="languages">
+                        <a>JavaScript, TypeScript, Node.js</a>
+                    </div>
+                    <div class="description">
+                        <a></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border"></div>
             <div id="experience" class="experience">
                 <div class="job">
                     <div class="company">
@@ -69,35 +133,24 @@
                     </div>
                 </div>
             </div>
-            <div id="projects" class="projects">
-                <div class="project">
-                    <div class="name">
-                        <a>MazeSolve</a>
-                    </div>
-                    <div class="languages">
-                        <a>Python</a>
-                    </div>
-                    <div class="description">
-                        <a></a>
-                    </div>
-                </div>
-            </div>
             <div id="goals" class="goals">
-
+                
             </div>
             <div id="skills" class="skills">
-
+                
+            </div>
+            <div class="play">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
             </div>
         </div>
-    </h>
-</body>
+        </body>
 
 </html>
 
 <script>
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
-        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             document.getElementById("nav").style.top = "0";
         } else {
             document.getElementById("nav").style.top = "-66px";
@@ -108,4 +161,16 @@
     function openMenu() {
         document.getElementById("myHeader").classList.toggle("change");
     }
+
+    function parallax() {
+        document.getElementById("parallax").style.top = 25 + window.pageYOffset/17 + "%";
+        document.getElementById("scroll").style.top = document.documentElement.scrollTop + document.documentElement.scrollTop/document.body.scrollHeight * window.innerHeight + "px";  
+    }
+
+    function constructor() {
+        document.getElementById("scroll").style.height = document.body.scrollHeight/10 + "px";
+    }
+
+    window.addEventListener("scroll", function(){parallax();});
+
 </script>

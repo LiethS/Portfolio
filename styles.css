@@ -13,7 +13,7 @@
 
 body::-webkit-scrollbar{
     display: none;
-  }
+}
 
 body {
     overflow-x: hidden;
@@ -40,7 +40,8 @@ a:active {
     width: 100%;
     display: flex;
     transition: top 1s;
-    z-index: 1;
+    z-index: 2;
+    opacity: 70%;
 } 
 
 .nav:after{
@@ -79,7 +80,7 @@ a:active {
 }
 
 .hamburger {
-    margin-left: 1%;
+    margin-left: -3%;
     margin-right: 1%;
     justify-self: right;
     align-self: center;
@@ -135,6 +136,7 @@ a:active {
 
 .menuToggle a:hover {
     color: rgb(47, 102, 255);
+    cursor: pointer;
 }
 
 .menuToggle span {
@@ -176,13 +178,15 @@ a:active {
 }
 
 .navigation {
+    position:absolute;
     font-family: 'Inter', sans-serif;
     height: 100px;
     font-size: 25px;
     display: flex;
     justify-content: space-around;
     align-items:center;
-    background: #000000;
+    width: 100%;
+    z-index: 1;
 }
 
 .navigation  a{
@@ -191,6 +195,7 @@ a:active {
     text-decoration: none;
     position: relative;
     transition: 1s;
+    z-index: 1;
 }
 
 .navigation  a:hover{
@@ -217,6 +222,7 @@ a:hover:after{
 }
 
 .earth {
+    position: relative;
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
@@ -224,33 +230,136 @@ a:hover:after{
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    z-index: 0;
+    object-fit: none;
+    width: 1920px;
+    height: 970px;
+    object-position: 20% 30%;
+
 }
 
 .myself {
     font-family: 'Inter', sans-serif;
     position:relative;
     transition: 2s ease;
+    -webkit-text-stroke: 1px black;
+    
 }
 
-.myself .name {
+.parallax{
     position: absolute;
-    font-size: 600%;
-    top: 20%;
+    top: 25%;
     left: 5%;
+    z-index: 1;
 }
 
-.myself .name a{
-    transition: 7s;
+.parallax .name {
+    font-size: 600%;
 }
 
-.myself .name a:hover{
+.parallax .name a{
+    transition: 5s;
+}
+
+.parallax .name a:hover{
     color: rgb(47, 102, 255);
     transition: 0s;
 }
 
-.myself .degree {
-    position: absolute;
+.parallax .degree {
+    position: relative;
     font-size: 200%;
-    top: 28%;
-    left: 5.3%;
+    left: 0.3%;
+}
+
+.play {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.play div{
+    position: relative;
+    background: black;
+    height: 20vh;
+    width: 10%;
+    transition: 3s;
+}
+
+.play div:hover {
+    background: white;
+    transition: 0.1s;
+}
+
+.scroll {
+    position: absolute;
+    background: rgb(47, 102, 255);
+    height: 10px;
+    width: 10px;
+    margin-left: 98.5%;
+    margin-top: 0.3%;
+    z-index: 1;
+    opacity: 50%;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+}
+
+.project {
+    font-family: 'Inter', sans-serif;
+    position: inherit;
+    display: flex;
+    background-color: #771817;
+    height: 540px;
+    width: 50%;
+    transition: 1s;
+}
+
+.project:hover{
+    width: 260%;
+    background-color: black;
+    transition: 0.2s;
+}
+
+.project:hover .languages{
+    opacity: 100%;
+}
+
+.project .languages{
+    margin-top: 48px;
+    opacity: 0%;
+    transition: 1s;
+}
+
+.project .name {
+    font-size: 40px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 48px;
+    justify-content: space-around;
+}
+
+.hborder {
+    position: relative;
+    background-color: black;
+    height: 540px;
+    width: 0.5%;
+}
+
+.section {
+    font-family: 'Inter', sans-serif;
+    font-size: 80px;
+    position: relative;
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    margin-top: -0.2%;
 }
