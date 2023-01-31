@@ -17,8 +17,7 @@ body::-webkit-scrollbar{
 
 body {
     overflow-x: hidden;
-    background-color: #ffffff;
-    background: linear-gradient(90deg, #3d3d3d, #222222);
+    background-color: #000000;
 }
 
 a:link,
@@ -363,3 +362,29 @@ a:hover:after{
     width: 100%;
     margin-top: -0.2%;
 }
+
+.arrow {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.arrow img{
+    height: 100px;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    bottom: 0px;
+    transition: 2s;
+    opacity: 100;
+    animation: MoveUpDown 1.5s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 230px;
+    }
+    50% {
+      bottom: 280px;
+    }
+  }

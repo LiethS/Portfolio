@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <script src="myScript.js"></script>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +68,7 @@
                     </div>
                     <img class="earth" src="552574.jpg">
                 </div>
+                <div id="arrow" class="arrow"><img src="Arrow.png"></div>
             </div>
             <div id="projects"class="section"><a>Projects</a></div>
             <div class="projects">
@@ -146,31 +147,3 @@
         </body>
 
 </html>
-
-<script>
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("nav").style.top = "0";
-        } else {
-            document.getElementById("nav").style.top = "-66px";
-        }
-    }
-    //try adding an oppacity change when scrolling down for the navigation bar
-
-    function openMenu() {
-        document.getElementById("myHeader").classList.toggle("change");
-    }
-
-    function parallax() {
-        document.getElementById("parallax").style.top = 25 + window.pageYOffset/17 + "%";
-        document.getElementById("scroll").style.top = document.documentElement.scrollTop + document.documentElement.scrollTop/document.body.scrollHeight * window.innerHeight + "px";  
-    }
-
-    function constructor() {
-        document.getElementById("scroll").style.height = document.body.scrollHeight/10 + "px";
-    }
-
-    window.addEventListener("scroll", function(){parallax();});
-
-</script>
