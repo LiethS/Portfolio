@@ -382,9 +382,9 @@ a:hover:after{
 
 @keyframes MoveUpDown {
     0%, 100% {
-      bottom: 230px;
+      bottom: 10%;
     }
     50% {
-      bottom: 280px;
+      bottom: 10vh;
     }
   }
