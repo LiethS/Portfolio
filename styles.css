@@ -1,7 +1,7 @@
 :root {
     --bg-start: #a01e1c;
     --bg-end: #771817;
-    --fg-color: rgb(255, 255, 255);
+    --fg-color: rgba(255, 255, 255, 0);
     color: white;
 }
 
@@ -11,13 +11,31 @@
     box-sizing: border-box;
 }
 
-body::-webkit-scrollbar{
-    display: none;
-}
-
 body {
     overflow-x: hidden;
+    overflow-y: overlay;
     background-color: #000000;
+}
+
+/* width */
+::-webkit-scrollbar {
+    position: fixed;
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5900ff7a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5900ffbb;
 }
 
 a:link,
@@ -41,9 +59,9 @@ a:active {
     transition: top 1s;
     z-index: 2;
     opacity: 70%;
-} 
+}
 
-.nav:after{
+.nav:after {
     content: "";
     position: absolute;
     background-color: rgb(255, 255, 255);
@@ -54,11 +72,11 @@ a:active {
     transition: 0.5s;
 }
 
-.nav:hover:after{
+.nav:hover:after {
     background-color: rgb(47, 102, 255);
 }
 
-.change .nav:after{
+.change .nav:after {
     background-color: rgb(47, 102, 255);
 }
 
@@ -67,14 +85,14 @@ a:active {
     align-self: center;
     justify-self: center;
     margin-top: 0;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     color: rgb(255, 255, 255);
     transition: 0.5s;
     cursor: pointer;
 }
 
-.logo_text:hover{
+.logo_text:hover {
     color: rgb(47, 102, 255);
 }
 
@@ -90,7 +108,9 @@ a:active {
     transition: 0.5s;
 }
 
-.hamburger:hover .bar1, .hamburger:hover .bar2, .hamburger:hover .bar3{
+.hamburger:hover .bar1,
+.hamburger:hover .bar2,
+.hamburger:hover .bar3 {
     background-color: rgb(47, 102, 255);
 }
 
@@ -177,18 +197,18 @@ a:active {
 }
 
 .navigation {
-    position:absolute;
+    position: absolute;
     font-family: 'Inter', sans-serif;
     height: 100px;
     font-size: 25px;
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     width: 100%;
     z-index: 1;
 }
 
-.navigation  a{
+.navigation a {
     margin-top: 2%;
     color: white;
     text-decoration: none;
@@ -197,13 +217,13 @@ a:active {
     z-index: 1;
 }
 
-.navigation  a:hover{
+.navigation a:hover {
     color: rgb(47, 102, 255);
     cursor: pointer;
     transition: 0.2s;
 }
 
-.navigation  a:after{
+.navigation a:after {
     content: "";
     position: absolute;
     background-color: rgb(47, 102, 255);
@@ -215,7 +235,7 @@ a:active {
     opacity: 0%;
 }
 
-a:hover:after{
+a:hover:after {
     opacity: 100%;
     transition: 0.2s;
 }
@@ -239,13 +259,13 @@ a:hover:after{
 
 .myself {
     font-family: 'Inter', sans-serif;
-    position:relative;
+    position: relative;
     transition: 2s ease;
     -webkit-text-stroke: 1px black;
-    
+
 }
 
-.parallax{
+.parallax {
     position: absolute;
     top: 25%;
     left: 5%;
@@ -256,11 +276,11 @@ a:hover:after{
     font-size: 600%;
 }
 
-.parallax .name a{
+.parallax .name a {
     transition: 5s;
 }
 
-.parallax .name a:hover{
+.parallax .name a:hover {
     color: rgb(47, 102, 255);
     transition: 0s;
 }
@@ -269,36 +289,6 @@ a:hover:after{
     position: relative;
     font-size: 200%;
     left: 0.3%;
-}
-
-.play {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.play div{
-    position: relative;
-    background: black;
-    height: 20vh;
-    width: 10%;
-    transition: 3s;
-}
-
-.play div:hover {
-    background: white;
-    transition: 0.1s;
-}
-
-.scroll {
-    position: absolute;
-    background: rgb(47, 102, 255);
-    height: 10px;
-    width: 10px;
-    margin-left: 98.5%;
-    margin-top: 0.3%;
-    z-index: 1;
-    opacity: 50%;
 }
 
 .projects {
@@ -316,17 +306,17 @@ a:hover:after{
     transition: 1s;
 }
 
-.project:hover{
+.project:hover {
     width: 260%;
     background-color: black;
     transition: 0.2s;
 }
 
-.project:hover .languages{
+.project:hover .languages {
     opacity: 100%;
 }
 
-.project .languages{
+.project .languages {
     margin-top: 48px;
     opacity: 0%;
     transition: 1s;
@@ -370,7 +360,7 @@ a:hover:after{
     width: 100%;
 }
 
-.arrow img{
+.arrow img {
     height: 100px;
     filter: brightness(0) invert(1);
     position: absolute;
@@ -380,11 +370,33 @@ a:hover:after{
     animation: MoveUpDown 1.5s linear infinite;
 }
 
+.play {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.play div{
+    position: relative;
+    background: black;
+    height: 20vh;
+    width: 10%;
+    transition: 3s;
+}
+
+.play div:hover {
+    background: white;
+    transition: 0.1s;
+}
+
 @keyframes MoveUpDown {
-    0%, 100% {
-      bottom: 10%;
+
+    0%,
+    100% {
+        bottom: 10%;
     }
+
     50% {
-      bottom: 10vh;
+        bottom: 10vh;
     }
-  }
+}
