@@ -300,7 +300,7 @@ a:hover:after {
     font-family: 'Inter', sans-serif;
     position: inherit;
     display: flex;
-    background-color: #771817;
+    background-color: #3a167e;
     height: 540px;
     width: 50%;
     transition: 1s;
@@ -316,10 +316,24 @@ a:hover:after {
     opacity: 100%;
 }
 
+.project:hover .description {
+    opacity: 100%;
+}
+
 .project .languages {
+    margin-top: 48px;
+    margin-right: 48px;
+    margin-left: 25px;
+    width: 10%;
+    opacity: 0%;
+    transition: 1s;
+}
+
+.project .description {
     margin-top: 48px;
     opacity: 0%;
     transition: 1s;
+    white-space: pre-line;
 }
 
 .project .name {
@@ -348,7 +362,7 @@ a:hover:after {
     background-color: black;
     justify-content: space-around;
     align-items: center;
-    height: 200px;
+    height: 130px;
     width: 100%;
     margin-top: -0.2%;
 }
@@ -370,22 +384,38 @@ a:hover:after {
     animation: MoveUpDown 1.5s linear infinite;
 }
 
-.play {
+.contactsection {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    margin-top: -0.2%;
 }
 
-.play div{
+.contact div{
+    font-family: 'Inter', sans-serif;
     position: relative;
-    background: black;
-    height: 20vh;
-    width: 10%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: #3a167e;
+    color: rgb(255, 255, 255);
+    white-space: pre-line;
+    height: 50px;
     transition: 3s;
 }
 
-.play div:hover {
-    background: white;
+.contact div:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: 0.1s;
 }
 
