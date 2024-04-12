@@ -20,7 +20,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
     position: fixed;
-    width: 10px;
+    width: 5px;
 }
 
 /* Track */
@@ -30,12 +30,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #5900ff7a;
+    background: #00065c;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #5900ffbb;
+    background: #290069;
 }
 
 a:link,
@@ -294,14 +294,74 @@ a:hover:after {
 .projects {
     position: relative;
     display: flex;
+    height: 260px;
+    background-image: url(2926fa7d562d1b5b6f7292a4c2ee1946.jpg);
+    background-size: 100%;
+}
+
+.experiences {
+    position: relative;
+    display: flex;
+    height: 380px;
+    background-image: url(53641212344-be1e94e20c-o.jpg);
+    background-size: 100%;
+}
+
+.experience {
+    font-family: 'Inter', sans-serif;
+    position: inherit;
+    display: flex;
+    height: 380px;
+    width: 50%;
+    transition: 1s;
+}
+
+.experience:hover {
+    width: 260%;
+    background-color: black;
+    transition: 0.2s;
+}
+
+.experience:hover .languages {
+    opacity: 100%;
+}
+
+.experience:hover .description {
+    opacity: 100%;
+}
+
+.experience .languages {
+    margin-top: 48px;
+    margin-right: 48px;
+    margin-left: 25px;
+    width: 10%;
+    opacity: 0%;
+    transition: 1s;
+}
+
+.experience .description {
+    margin-top: 48px;
+    opacity: 0%;
+    transition: 1s;
+    white-space: pre-line;
+}
+
+.experience .name {
+    font-size: 40px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 48px;
+    justify-content: space-around;
 }
 
 .project {
     font-family: 'Inter', sans-serif;
     position: inherit;
     display: flex;
-    background-color: #3a167e;
-    height: 540px;
+    height: 260px;
     width: 50%;
     transition: 1s;
 }
@@ -350,7 +410,7 @@ a:hover:after {
 .hborder {
     position: relative;
     background-color: black;
-    height: 540px;
+    height: 380px;
     width: 0.5%;
 }
 
@@ -362,7 +422,7 @@ a:hover:after {
     background-color: black;
     justify-content: space-around;
     align-items: center;
-    height: 130px;
+    height: 100px;
     width: 100%;
     margin-top: -0.2%;
 }
@@ -373,6 +433,51 @@ a:hover:after {
     justify-content: space-around;
     width: 100%;
 }
+
+.mondelezimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.mondelezimg img{
+    width: 50%;
+}
+
+.macewanimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.macewanimg img{
+    width: 20%;
+}
+
+.eworximg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.eworximg img{
+    width: 20%;
+}
+
+.fossilimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.fossilimg img{
+    width: 20%;
+}
+
 
 .arrow img {
     height: 100px;
@@ -406,10 +511,10 @@ a:hover:after {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: #3a167e;
+    background: #00065c;
     color: rgb(255, 255, 255);
     white-space: pre-line;
-    height: 50px;
+    height: 55px;
     transition: 3s;
 }
 
@@ -417,6 +522,27 @@ a:hover:after {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     transition: 0.1s;
+}
+
+.aboutme {
+    background-image: url(rawImage.jpg);
+    height: 1300px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+}
+
+.aboutmecontainer {
+    width: 45%;
+    background-color: #00000088;
+    color: rgba(255, 255, 255, 0.884);
+    white-space: pre-line;
+}
+
+.metitles {
+    font-size: x-large;
+    color: white;
+    font-weight: bold;
 }
 
 @keyframes MoveUpDown {
