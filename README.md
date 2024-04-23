@@ -1,3 +1,2 @@
 # Portfolio
-My Portfolio
-lieths.github.io
+[Lieth's Portfolio](https://lieths.github.io)
